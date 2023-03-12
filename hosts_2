@@ -1,20 +1,19 @@
 [STAGING_SERVERS_WEB]
-linuxX1  ansible_host=172.31.87.238 
-linuxX2  ansible_host=172.31.87.239 password=mysecret
+linuxX1  ansible_host=${LINUXX1_IP}
+linuxX2  ansible_host=${LINUXX2_IP} password=${PASS}
 
 [PROD_SERVERS_WEB]
-linux1  ansible_host=172.31.87.92
-linux2  ansible_host=172.31.81.11
+linux1  ansible_host=${LINUX1_IP}
+linux2  ansible_host=${LINUX2_IP}
 
 [STAGING_SERVERS_DB]
-172.31.87.1
-172.31.87.2
+172.31.X.X
+172.31.X.X
 
 [PROD_SERVERS_DB]
-172.32.87.10
-172.32.87.20
+172.32.X.X
+172.32.X.X
 
 [ALL_SERVERS_DB:children]
 STAGING_SERVERS_DB
 PROD_SERVERS_DB
-
